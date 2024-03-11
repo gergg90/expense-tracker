@@ -2,11 +2,17 @@ export const initialState = {
   transactions: [],
 };
 
+export const ACTION_TYPES = {
+  ADD_TRANSACTION: "ADD_TRANSACTION",
+};
+
 export const globalReducer = (state, action) => {
   switch (action.type) {
-
-    case "ADD_TRANSACTION": {
-        return [...state.transactions, action.payload]
+    case ACTION_TYPES.ADD_TRANSACTION: {
+      return {
+        ...state,
+        transactions: [...state.transactions, action.payload],
+      };
     }
 
     default:

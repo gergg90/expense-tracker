@@ -3,7 +3,7 @@ import useGlobalState from "../hooks/useGlobalState";
 function Balance() {
   const data = useGlobalState();
 
-  return <div>Balance {JSON.stringify(data, null, 2)}</div>;
+  return <div>Balance</div>;
 }
 
 export default Balance;

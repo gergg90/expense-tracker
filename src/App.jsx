@@ -5,6 +5,7 @@ import { GlobalStateProvider } from "./context/GlobalState.jsx";
 import Balance from "./components/Balance.jsx";
 import Header from "./components/Header.jsx";
 import TransactionsForm from "./components/TransactionsForm.jsx";
+import TransactionList from "./components/TransactionList.jsx";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <Header />
       <Balance />
       <TransactionsForm />
+      <hr />
+      <TransactionList/>
     </GlobalStateProvider>
   );
 }

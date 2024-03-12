@@ -8,23 +8,28 @@ function IncomeExpenses() {
     .filter((income) => income > 0)
     .reduce((acc, item) => {
       return (acc += item);
-    }, 0);
+    }, 0)
+    .toFixed(2);
 
-  const expenses = transactions
-    .map((transaction) => transaction.amount)
-    .filter((expense) => expense < 0)
-    .reduce((acc, item) => {
-      return (acc += item);
-    }, 0);
+  const expenses =
+    transactions
+      .map((transaction) => transaction.amount)
+      .filter((expense) => expense < 0)
+      .reduce((acc, item) => {
+        return (acc += item);
+      }, 0)
+      .toFixed(2) * -1;
 
   return (
     <>
-      <div>
-        <h3>Income: ${income}</h3>
+      <div className="flex justify-between items-center">
+        <h3>Income:</h3>
+        <h1 className="text-2xl font-bold">${income}</h1>
       </div>
 
-      <div>
-        <h3>Expenses: ${expenses}</h3>
+      <div className="flex justify-between items-center">
+        <h3>Expenses:</h3>
+        <h1 className="text-2xl font-bold">${expenses}</h1>
       </div>
     </>
   );

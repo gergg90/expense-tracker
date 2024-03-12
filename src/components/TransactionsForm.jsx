@@ -21,6 +21,7 @@ function TransactionsForm() {
       <form onSubmit={onSubmitTransactionsForm}>
         <div>
           <input
+            className="bg-teal-800 text-white px-3 py-2 rounded-lg block my-4 w-full"
             onChange={(e) => {
               setDescription(e.target.value);
             }}
@@ -29,6 +30,7 @@ function TransactionsForm() {
           />
 
           <input
+            className="bg-teal-800 text-white px-3 py-2 rounded-lg block mb-2 w-full"
             onChange={(e) => {
               setAmount(e.target.value);
             }}
@@ -36,9 +38,10 @@ function TransactionsForm() {
             step="0.1"
             placeholder="00.00"
           />
-          <div>
-            <button>Submit transaction</button>
-          </div>
+
+          <button className="bg-purple-900 w-full rounded-lg text-white py-2 mt-2 ">
+            Submit transaction
+          </button>
         </div>
       </form>
     </div>

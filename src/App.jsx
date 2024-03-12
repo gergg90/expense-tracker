@@ -11,12 +11,21 @@ import IncomeExpenses from "./components/IncomeExpenses.jsx";
 function App() {
   return (
     <GlobalStateProvider>
-      <Header />
-      <Balance />
-      <IncomeExpenses/>
-      <TransactionsForm />
-      <hr />
-      <TransactionList/>
+      <div className="bg-zinc-900 text-white h-screen flex justify-center items-center">
+        <div className="container mx-auto w-2/6">
+          <div className="bg-zinc-600 p-10 rounded-lg flex">
+            <div>
+              <Header />
+              <Balance />
+              <IncomeExpenses />
+              <TransactionsForm />
+            </div>
+            <div className="w-full">
+              <TransactionList />
+            </div>
+          </div>
+        </div>
+      </div>
     </GlobalStateProvider>
   );
 }

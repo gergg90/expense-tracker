@@ -39,7 +39,7 @@ function TransactionsForm() {
             placeholder="00.00"
           />
 
-          <button className="bg-purple-900 w-full rounded-lg text-white py-2 mt-2 ">
+          <button className="bg-purple-900 hover:bg-purple-800 w-full rounded-lg text-white py-2 mt-2 ">
             Submit transaction
           </button>
         </div>

@@ -24,12 +24,12 @@ function IncomeExpenses() {
     <>
       <div className="flex justify-between items-center">
         <h3>Income:</h3>
-        <h1 className="text-2xl font-bold">${income}</h1>
+        <h1 className="text-2xl font-bold text-emerald-600">${income}</h1>
       </div>
 
       <div className="flex justify-between items-center">
         <h3>Expenses:</h3>
-        <h1 className="text-2xl font-bold">${expenses}</h1>
+        <h1 className="text-2xl font-bold text-red-600">${expenses}</h1>
       </div>
     </>
   );

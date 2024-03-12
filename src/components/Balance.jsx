@@ -7,7 +7,8 @@ function Balance() {
     .map((transaction) => transaction.amount)
     .reduce((acc, item) => {
       return (acc += item);
-    }, 0);
+    }, 0)
+    .toFixed(2);
 
   return (
     <div className="flex justify-between items-center">

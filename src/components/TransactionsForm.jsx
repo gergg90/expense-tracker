@@ -2,8 +2,8 @@ import { useState } from "react";
 import useGlobalState from "../hooks/useGlobalState";
 
 function TransactionsForm() {
-  const [description, setDescription] = useState();
-  const [amount, setAmount] = useState();
+  const [description, setDescription] = useState("");
+  const [amount, setAmount] = useState(0);
 
   const { addTransaction } = useGlobalState();
 
@@ -14,6 +14,8 @@ function TransactionsForm() {
       description,
       amount: +amount,
     });
+    setAmount(0);
+    setDescription("");
   };
 
   return (
@@ -27,6 +29,7 @@ function TransactionsForm() {
             }}
             type="text"
             placeholder="Enter your description"
+            value={description}
           />
 
           <input
@@ -37,6 +40,7 @@ function TransactionsForm() {
             type="number"
             step="0.1"
             placeholder="00.00"
+            value={amount}
           />
 
           <button className="bg-purple-900 hover:bg-purple-800 w-full rounded-lg text-white py-2 mt-2 ">

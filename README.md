@@ -1,3 +1,3 @@
 # React + Vite
 
-### Project in construction. 🚧✋🛑
+### Readme in construction. 🎧🖱️❕

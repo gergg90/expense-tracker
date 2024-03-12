@@ -16,13 +16,16 @@ function ExpenseChart() {
   const expensesPercentage = Math.round((expense / income) * 100);
   const incomesPercentage = 100 - expensesPercentage;
 
+  const incomePie = incomesPercentage ? incomesPercentage : 0;
+  const expensePie = expensesPercentage ? expensesPercentage : 0;
+
   return (
     <>
       <VictoryPie
         colorScale={["#059669", "#dc2626"]}
         data={[
-          { x: "Income", y: incomesPercentage },
-          { x: "Expense", y: expensesPercentage },
+          { x: "Income", y: incomePie },
+          { x: "Expense", y: expensePie },
         ]}
         animate={{
           duration: 2000,

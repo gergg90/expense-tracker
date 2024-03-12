@@ -8,8 +8,7 @@ function IncomeExpenses() {
     .filter((income) => income > 0)
     .reduce((acc, item) => {
       return (acc += item);
-    }, 0)
-    .toFixed(2);
+    }, 0).toFixed(2)
 
   const expenses =
     transactions
